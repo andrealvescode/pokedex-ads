@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex ADS | Explore o Universo Pokémon</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Pokédex - Análise e Desenvolvimento de Sistemas </h1>
+        <p>Explore o universo Pokémon!</p>
+    </header>
+
+    <main class="container">
+        
+<section class="introducao">
+    <div class="conteudo-introducao">
+        <span class="etiqueta-introducao">
+            EXPLORE • DESCUBRA • COLECIONE
+        </span>
+
+        <h2>
+            Sua próxima aventura
+            <span>começa aqui!</span>
+        </h2>
+
+        <p>
+            Descubra Pokémons incríveis, conheça seus tipos,
+            habilidades e características em uma experiência
+            interativa conectada à PokéAPI.
+        </p>
+
+        <a href="#galeria" class="botao-explorar">
+            Explorar Pokémon <span>→</span>
+        </a>
+
+        <div class="destaques-capa">
+            <span>✓ Dados da PokéAPI</span>
+            <span>✓ Explore diferentes Pokémon</span>
+        </div>
+    </div>
+
+    <div class="pokemon-capa" aria-label="Pokémon em destaque">
+        <img
+            class="pokemon-pikachu"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+            alt="Pikachu"
+        >
+
+        <img
+            class="pokemon-charizard"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+            alt="Charizard"
+        >
+
+        <img
+            class="pokemon-bulbasaur"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+            alt="Bulbasaur"
+        >
+
+        <div class="selo-pokemon">POKÉMON<br>WORLD</div>
+    </div>
+</section>
+
+        <section class="galeria" id="galeria">
+            <h2>Galeria de Pokémon</h2>
+
+            <div class="area-pesquisa">
+                <h3>🔎 Qual Pokémon você procura?</h3>
+
+                <p class="descricao-pesquisa">
+                    Digite o nome ou número do Pokémon para descobrir
+                    seus detalhes!
+                </p>
+
+                <div class="controles">
+                    <input
+                        type="text"
+                        id="campo-pesquisa"
+                        placeholder="Ex.: Pikachu, Charizard..."
+                        aria-label="Digite o nome ou número do Pokémon"
+                    >
+
+                    <button id="botao-pesquisar" type="button">
+                        Pesquisar
+                    </button>
+                </div>
+            </div>
+
+            <div id="mensagem" role="status" aria-live="polite">
+                Carregando Pokémon...
+            </div>
+
+            <div id="lista-pokemon" class="lista-pokemon">
+                <!-- Os cards são criados dinamicamente pelo JavaScript -->
+            </div>
+
+            <button id="botao-carregar" type="button" hidden>
+                Carregar mais Pokémon
+            </button>
+
+            <section
+                id="detalhes-pokemon"
+                class="detalhes-pokemon"
+                aria-label="Detalhes do Pokémon"
+                hidden
+            >
+                <button id="fechar-detalhes" type="button">
+                    Fechar detalhes ✖
+                </button>
+
+                <div id="conteudo-detalhes"></div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Projeto acadêmico — Web Programming for Front End</p>
+        <p>Dados fornecidos pela PokéAPI.</p>
+    </footer>
+</body>
+</html>
